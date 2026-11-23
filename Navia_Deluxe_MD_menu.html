@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Navia Deluxe MD</title>
+<style>
+:root{--bg:#09090b;--card:#141417;--card2:#1c1c20;--card3:#232328;--line:#2b2b31;--ink:#fff;--soft:#9d9da6;--red:#ee2a3c;--red2:#b3121f;--paper:#fff;--paperink:#0b0b0c;--sys:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;--mono:ui-monospace,Menlo,Consolas,monospace}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+body{background:transparent;color:var(--ink);font-family:var(--sys);min-height:100vh}
+.stage{min-height:100vh;display:flex;justify-content:center;padding:14px 10px}
+.app{width:100%;max-width:380px;background:radial-gradient(120% 40% at 50% 0%,#1c0a0d 0%,var(--bg) 60%);border-radius:22px;overflow:hidden;border:1px solid #1f1f24;box-shadow:0 18px 40px #0008}
+.hero{position:relative;height:215px;background:linear-gradient(135deg,#e11d2e,#4a0a10 65%,#09090b)}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#09090b55 0%,transparent 30%,#09090bb3 70%,var(--bg) 100%)}
+.hero .tag,.hero .ver{position:absolute;z-index:2;top:12px;font-size:10px;font-weight:800;letter-spacing:.8px;padding:6px 11px;border-radius:999px}
+.hero .tag{right:12px;background:var(--red);color:#fff}.hero .ver{left:12px;background:#09090bbd;color:#fff}
+.who{position:absolute;z-index:2;left:16px;right:16px;bottom:12px}.who h1{font-size:26px;font-weight:900}.who h1:after{content:"";display:block;width:38px;height:3px;background:var(--red);margin-top:6px;border-radius:3px}.who p{font-size:12px;color:#d9d9de;margin-top:8px}
+.body{padding:0 12px 14px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:8px 0 10px}.stat{background:linear-gradient(160deg,#f03245,#b3121f);border-radius:14px;padding:12px 2px;text-align:center}.stat b{display:block;font-size:19px}.stat span{font-size:9px;font-weight:800;letter-spacing:.8px}
+.label{display:flex;align-items:center;gap:7px;font-size:10px;font-weight:900;letter-spacing:1.2px;color:var(--red);margin-bottom:10px}.label:before{content:"";width:3px;height:11px;background:var(--red);border-radius:2px}
+.paper{background:var(--paper);color:var(--paperink);border-radius:16px;padding:13px;margin-bottom:10px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.kv{min-width:0;background:#f4f4f6;border-radius:10px;padding:8px 10px}.kv small{display:block;font-size:9.5px;font-weight:700;color:#76767e;text-transform:uppercase}.kv b{display:block;font-size:12.5px;margin-top:2px;overflow-wrap:anywhere}
+.dark{background:linear-gradient(180deg,#18181c,#121215);border:1px solid var(--line);border-radius:16px;padding:13px;margin-bottom:10px;position:relative}.dark:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(var(--red),var(--red2))}.dark .kv{background:var(--card2);border:1px solid var(--line)}.dark .kv small{color:var(--soft)}.prof{display:flex;align-items:center;gap:12px;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid var(--line)}.ava{width:58px;height:58px;flex:none;border-radius:50%;background:linear-gradient(135deg,var(--red),var(--red2));display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:900;border:2px solid var(--red)}.pmeta{min-width:0}.pmeta h2{font-size:16px}.pmeta p{font-size:11px;color:var(--soft);margin-top:3px;font-family:var(--mono)}.badges{display:flex;gap:5px;margin-top:7px}.bdg{font-size:9.5px;font-weight:800;padding:3px 9px;border-radius:999px;background:var(--card3);border:1px solid var(--line)}
+.tools{display:flex;gap:8px;margin-bottom:10px}.inp{flex:1;min-width:0;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:11px 12px;color:var(--ink);font-size:14px}.btn{border:0;border-radius:12px;padding:0 14px;background:#fff;color:#0b0b0c;font-size:12px;font-weight:900}
+.cat{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:7px;overflow:hidden}.cat-h{display:flex;align-items:center;gap:10px;padding:10px 12px;cursor:pointer}.em{width:32px;height:32px;border-radius:10px;background:var(--card3);display:grid;place-items:center}.nm{flex:1;font-size:13px;font-weight:800;text-transform:uppercase}.ct{font-size:11px;background:var(--card3);border-radius:999px;padding:3px 9px}.cat-b{display:none;padding:2px 10px 10px}.cat.open .cat-b{display:grid;grid-template-columns:1fr 1fr;gap:6px}.cat.open{border-color:#ee2a3caa}.cmd{font:11px var(--mono);padding:8px 9px;background:var(--card2);border:1px solid #26262b;border-radius:9px;color:#f1f1f3;overflow-wrap:anywhere;cursor:pointer}.empty{grid-column:1/-1;text-align:center;color:var(--soft);font-size:12px;padding:14px}.foot{text-align:center;font-size:10.5px;color:var(--soft);margin-top:12px}.foot b{color:var(--red)}
+</style>
+</head>
+<body>
+<div class="stage"><main class="app">
+  <header class="hero"><div class="ver">Navia Deluxe MD</div><div class="tag">PUBLIC</div><div class="who"><h1>Navia Deluxe MD</h1><p>Selamat datang, Tuanmudaa. Semua fitur ada di bawah.</p></div></header>
+  <section class="body">
+    <div class="stats"><div class="stat"><b id="features">0</b><span>FITUR</span></div><div class="stat"><b id="commands">0</b><span>COMMAND</span></div><div class="stat"><b id="catcount">0</b><span>KATEGORI</span></div></div>
+    <section class="paper"><div class="label">INFO BOT</div><div class="grid" id="info"></div></section>
+    <section class="dark"><div class="label">PROFIL OWNER</div><div class="prof"><div class="ava">T</div><div class="pmeta"><h2>Tuanmudaa</h2><p>+6281377494379</p><div class="badges"><span class="bdg">OWNER</span><span class="bdg">ANDROID</span></div></div></div><div class="grid" id="profile"></div></section>
+    <div class="tools"><input class="inp" id="search" placeholder="Cari command..." autocomplete="off"><button class="btn" id="toggle">Buka semua</button></div>
+    <div id="categories"></div><div class="foot">Navia Deluxe MD · <b id="footcount">0</b> command</div>
+  </section>
+</main></div>
+<script>
+const DATA={
+ bot:"Navia Deluxe MD", name:"Tuanmudaa", prefix:".", ownerName:"Tuanmuda",
+ number:"6281377494379", mode:"Public", version:"1.0.0",
+ info:[["Nama Bot","Navia Deluxe MD"],["Nama Owner","Tuanmuda"],["Prefix","."],["Nomor Owner","6281377494379"],["Mode","Public"],["Versi","1.0.0"]],
+ profile:[["Status","Owner"],["Perangkat","Android"]],
+ // Isi kategori dan command bot di sini atau hubungkan dari plugin menu.
+ categories:[]
+};
+const $=s=>document.querySelector(s);
+function grid(target,rows){rows.forEach(([k,v])=>{const d=document.createElement("div");d.className="kv";const a=document.createElement("small");a.textContent=k;const b=document.createElement("b");b.textContent=v;d.append(a,b);target.append(d)})}
+grid($("#info"),DATA.info);grid($("#profile"),DATA.profile);
+const cats=DATA.categories;let opened=new Set([0]);
+function render(filter=""){
+ const root=$("#categories");root.textContent="";let count=0;
+ cats.forEach((cat,i)=>{const cmds=cat.cmds.filter(c=>c.toLowerCase().includes(filter.toLowerCase()));if(filter&&!cmds.length)return;count+=cmds.length;
+ const box=document.createElement("div");box.className="cat"+(opened.has(i)||filter?" open":"");
+ const head=document.createElement("div");head.className="cat-h";head.innerHTML=`<span class="em">${cat.emoji||"📁"}</span><span class="nm"></span><span class="ct">${cmds.length}</span><span>▼</span>`;head.querySelector(".nm").textContent=cat.name;
+ const body=document.createElement("div");body.className="cat-b";cmds.forEach(cmd=>{const item=document.createElement("div");item.className="cmd";item.textContent=DATA.prefix+cmd;item.onclick=()=>{if(navigator.clipboard)navigator.clipboard.writeText(DATA.prefix+cmd)};body.append(item)});
+ if(!cmds.length&&filter){const e=document.createElement("div");e.className="empty";e.textContent="Tidak ada command yang cocok.";body.append(e)}
+ head.onclick=()=>{box.classList.toggle("open");if(box.classList.contains("open"))opened.add(i);else opened.delete(i)};
+ box.append(head,body);root.append(box);
+ });
+ $("#catcount").textContent=cats.length;$("#commands").textContent=count;$("#features").textContent=count;$("#footcount").textContent=count;
+ if(!cats.length){const e=document.createElement("div");e.className="empty";e.textContent="Kategori command akan muncul setelah data plugin bot dimasukkan.";root.append(e)}
+}
+$("#search").addEventListener("input",e=>render(e.target.value.trim()));
+$("#toggle").onclick=()=>{if(opened.size>=cats.length)opened.clear();else cats.forEach((_,i)=>opened.add(i));render($("#search").value)};
+render();
+</script>
+</body>
+</html>
